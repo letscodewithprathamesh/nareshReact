@@ -1,0 +1,38 @@
+ img
+{
+  width: 220px;
+  
+}
+
+.movies
+{
+  display: flex;
+  gap: 25px;
+  text-align: center;
+}
+
+.movie
+{
+  padding: 30px 10px 10px ;
+  box-shadow: 5px 5px 5px black;
+  background-color: red;
+  color: white;
+}
+
+.movies
+{
+  padding: 20px 0px 30px 20px;
+}
+
+#maintitle h1
+{
+  margin: 0px 40px ;
+  
+  justify-content: center;
+  color: white;
+}
+
+body
+{
+  background-color: black;
+}
