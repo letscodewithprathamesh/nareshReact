@@ -35,6 +35,7 @@ function App()
       <button onClick={()=>{add()}}  disabled={c===25}>INCREMENT</button>
       <button onClick={()=>{if(c>0){setCount(c-1)}}} disabled={c===0}>DECREMENT</button>
       <button onClick={()=>{setCount(0)}}>RESET</button>
+
       </div>
     </div>
   )
