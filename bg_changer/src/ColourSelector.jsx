@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function ColourSelector()
 {
-    const[bgcolor,SetBgcolor]=useState('#000000')
+    const[bgcolor,SetBgcolor]=useState('#FFFFFF')
 
  const select=(event)=>{
     SetBgcolor(event.target.value)
@@ -17,8 +17,9 @@ function ColourSelector()
 
     return(
         <div className="selectors" style={{backgroundColor:bgcolor}}>
-            <input type="color" onChange={select} value={bgcolor}/>
-
+            <h1>Pick a Colour</h1>
+            <input type="color" onChange={select} value={bgcolor} id="colors"/>
+   
         </div>
     )
 }
