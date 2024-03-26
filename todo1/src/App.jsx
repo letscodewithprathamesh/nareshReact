@@ -5,6 +5,7 @@ function App()
 
   const[text,Settext]=useState([]);
   const[values,SetValue]=useState('');
+  const[dummytext,SetDummy]=useState('')
 
   const change=()=>
   {
@@ -24,6 +25,12 @@ function App()
     text.splice(index,1);
     Settext([...text])
   }
+
+  const update=(event)=>{
+
+    SetDummy(event.target.value)
+  }
+
   return(
     <div className="todo"> 
       <h1>TODO LIST</h1>
@@ -35,7 +42,11 @@ function App()
       <ol>
         {text.map((t,i)=>(
            
-            <li key={i}>{t} <button id="delete" onClick={()=>remove(i)}>❌</button></li>
+            <li key={i}>
+              {t}
+             <button id="delete" onClick={()=>remove(i)}>❌</button>
+             <button onChange={()=>{update(i,t)}} >UPDATE </button>
+            </li>
     
         )
         )}
