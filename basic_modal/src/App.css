@@ -1,0 +1,105 @@
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 48vw;
+  width: 220vh;
+  background-color: yellow;
+  
+}
+
+.App .button1
+{
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color:cornflowerblue
+}
+
+.modalbackground{
+  width: 120vw;
+  height: 120vh;
+  background-color: yellow;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalcontainer{
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: bisque 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modalcontainer .titleClosebtn{
+  display:  flex;
+  justify-content: flex-end;
+}
+
+.modalcontainer .titleClosebtn button{
+ background-color: white;
+ font-size: 20px;
+ border: none;
+}
+
+
+.modalcontainer .title
+{
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modalcontainer .body
+{
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modalcontainer .footer
+{
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalcontainer .footer button
+{
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
+
+#cancelbtn
+{
+  background-color: red;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+}
