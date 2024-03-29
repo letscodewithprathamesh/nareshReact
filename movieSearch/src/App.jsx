@@ -1,35 +1,37 @@
+import React from 'react'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react'
+import Movies from './Movies.jsx';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App()
+ {
+
+
+  const[searchTerm,setSearchterm]=useState('')
+  const[movieList,setMovieList]=useState([]);
+
+ useEffect(()=>{
+  async function fetchdata()
+  {
+    const res=await fetch(`https://www.omdbapi.com/?s=${searchTerm}&apikey=e3277b8e`);  // ${searchTerm} this is template which we had add to s which search movie ,movie name and api key in the whole API, using  ${searchTerm} template we are assigning searchTerm state to which will directly takes the value
+    const data=await res.json();
+    console.log(data)
+    setMovieList(data.Search) //data all the api data had come as object under Search all the data is in the array
+    console.log(data.Search);
+
+   
+  }
+
+  fetchdata();
+ },[searchTerm])  //only for dependency serachTerm state the component will render
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='main'>
+      <h1 id='title'>MOVIE SEARCH</h1>
+      <input type='text' value={searchTerm} onChange={(event)=>{setSearchterm(event.target.value)}} />
+      <Movies movieList={movieList}/> {/* pass prop of whole api data in the form array */}
+    </div>
   )
 }
-
-export default App
