@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .productcontainer {
+    display: flex;
+   
+    flex-wrap:wrap; /* Added to enable wrapping */
+    flex-direction: row;
+    
+    justify-content: center;
+    background-color: yellow;
+  }
+  
+  .image {
+    flex: 1 0 auto; /* Makes all images take equal space */
+  }
+  
+  .image img {
+    max-width: 200px; /* Optional: Set a maximum width for images */
+  }
+  
+  .title {
+    flex: 1 0 auto; /* Makes all titles take equal space */
+  }
+  
+ 
