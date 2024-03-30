@@ -30,7 +30,11 @@ export default function App()
   return (
     <div className='main'>
       <h1 id='title'>MOVIE SEARCH</h1>
+      <div className='search'>
       <input type='text' value={searchTerm} onChange={(event)=>{setSearchterm(event.target.value)}} />
+      <button id='clear' onClick={()=>{setSearchterm('')}} >CLEAR</button>
+      </div>
+      
       <Movies movieList={movieList}/> {/* pass prop of whole api data in the form array */}
     </div>
   )
