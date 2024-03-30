@@ -45,25 +45,27 @@ body
 }
 
 .quotecontainer{
-    display: flex;
-    gap: 25px;
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-columns:500px 500px;
+    gap: 60px;
     align-items: center;
     justify-content: center;
     width: 215vh;
     height: 50vw;
-    
+    margin: 50px;
 }
 
 .savequote{
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 120vh;
+    width: 80vh;
     height: 30vw;
     background-color: yellow;
-    margin-top: 0px;
     border-style:solid;
+    margin-top: 20px;
 }
 
 #delete
