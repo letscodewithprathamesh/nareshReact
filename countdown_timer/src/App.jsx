@@ -13,28 +13,39 @@ export default function App()
   useEffect(() => {
     let intervalId;
 
-    if (timerRunning) {
-      intervalId = setInterval(() => {
-        // Decrease seconds and handle when they reach zero
-        if (sec > 0) {
+    if (timerRunning) 
+    {
+      intervalId = setInterval(() => 
+      {
+        if (sec > 0 && sec<=60) 
+        {
           setsec(sec - 1);
-        } else {
-          if (min > 0) {
+        } 
+        else 
+        {
+          if (min > 0 && min<=60) 
+          {
             setmin(min - 1);
             setsec(59);
-          } else {
+          }
+          else 
+          {
             if (hr > 0) {
               sethr(hr - 1);
               setmin(59);
               setsec(59);
-            } else {
+            } 
+            else 
+            {
               clearInterval(intervalId);
               setTimerRunning(false);
             }
           }
         }
       }, 1000);
-    } else {
+    } 
+    else
+    {
       clearInterval(intervalId);
     }
 
@@ -55,12 +66,12 @@ export default function App()
       <div className='countcontainer'>
         <div className='countvalue'>
         <h1>COUNTDOWN TIMER</h1>
-          <h1>Enter Hours</h1>
-          <input type="text" value={hr} onChange={(e)=>{sethr(e.target.value)}} />
-          <h1>Enter Minutes</h1>
-          <input type="text" value={min} onChange={(e)=>{setmin(e.target.value)}}/>
-          <h1>Enter seconds</h1>
-          <input type="text" value={sec} onChange={(e)=>{setsec(e.target.value)}}/>
+          
+          <input type="text" value={hr!==0?hr:""} onChange={(e)=>{sethr(e.target.value)}} placeholder='Enter Hours'/>
+          
+          <input type="text" value={min!==0?min:""} onChange={(e)=>{if(e.target.value>=61){alert("Please enter less than 60 ")}else{setmin(e.target.value)}}} placeholder='Enter Minutes'/>
+         
+          <input type="text" value={sec!==0?sec:""} onChange={(e)=>{if(e.target.value>=61){alert("Please enter less than 60 ")}else{setsec(e.target.value)}}} placeholder='Enter Sec'/>
        
         </div>
 
@@ -71,10 +82,10 @@ export default function App()
         </div>
 
         <div className='countview'>
-          <h1>{hr}</h1>
-          <h1>{min}</h1>
-          <h1>{sec}</h1>
-        </div>
+      <h1>{hr}</h1>
+      <h1>{min}</h1>
+      <h1>{sec}</h1>
+       </div>
       </div>
     </div>
   )
