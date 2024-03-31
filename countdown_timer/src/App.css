@@ -1,0 +1,81 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+.countvalue{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 5px 0px;
+  padding-bottom: 50px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  
+}
+
+.countvalue input{
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  border-style: none;
+  border-radius: 10px;
+  background-color: rgba(99, 93, 93, 0.853);
+
+}
+
+.countbutton {
+  align-items: center;
+  text-align: center;
+
+}
+
+.countbutton button{
+  margin-inline-start: 20px;
+  border-style: none;
+  background-color: rgb(1, 100, 200);
+  height: 50px;
+  width: 100px;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#pause:hover{
+  background-color:red;
+  box-shadow: blue 10px 10px 10px;
+}
+
+#start:hover{
+  background-color:rgb(21, 215, 14);
+  box-shadow: blue 10px 10px 10px;
+}
+
+#reset:hover{
+  background-color:rgb(236, 183, 9);
+  box-shadow: blue 10px 10px 10px;
+}
+
+.countview{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+.countview h1{
+  border-style:solid;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+}
