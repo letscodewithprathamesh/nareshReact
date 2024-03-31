@@ -1,0 +1,33 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  border: solid;
+  margin: 150px 10px 10px 500px;
+}
+
+.evenodd
+{
+  color: red;
+  font-size: 20px;
+}
+
+button
+{
+  width: 100px;
+  margin-inline-start: 30px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 30px;
+  background-color: cornflowerblue;
+  border-style: none;
+  
+}
