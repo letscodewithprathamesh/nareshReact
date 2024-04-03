@@ -57,7 +57,7 @@ console.log(formDetails);
   return (
     <div className='Container'>
       <div className="forms">
-        <h1>Contact Forms</h1>
+        <h1>CONTACT FORMS</h1>
         <form action="" className="contactform" onSubmit={submit}>
           <input 
           type="text" 
