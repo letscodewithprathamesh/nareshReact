@@ -10,14 +10,9 @@ export default function App()
   })
   //we are creating a state name as formdetails which is an object which has 3 properties such username,email and password all with and empty string which we are going to update.
 
-
   
   const [formError,setFormError]=useState({
     password:""  })
-
-
-
-
 
 
 const change=(e)=>{
