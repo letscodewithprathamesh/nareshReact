@@ -24,7 +24,7 @@ To see the updated value of count in the <p> tag, you should use count directly,
   return (
     <div>
       <p>Count: {count}</p>
-   
+      <h1>COUNT REF: {countRef.current}</h1>
       <button onClick={handleClick}>Increment Count</button>
     </div>
   );

@@ -1,0 +1,30 @@
+.counter
+{
+  height: 200px;
+  width: 400px;
+  background-color: rgb(246, 15, 15);
+  flex-direction: column;
+  text-align: center;
+  margin-top: 150px;
+}
+
+p
+{
+  font-size: 50px;
+}
+
+
+.buttons button
+{
+  background-color: yellow;
+  padding:10px;
+  border-radius: 10px;
+  
+}
+
+.button
+{
+  display: flex;
+  gap: 40px;
+  margin: 10px;
+}
