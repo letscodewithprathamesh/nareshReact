@@ -48,6 +48,8 @@ export default function App()
         {factdata}
       </div>
       <Count />
+
+      
     </div>
   )
 }
