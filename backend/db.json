@@ -1,19 +1,23 @@
 {
-    "movies":[
-        {
-            "Title":"RRR",
-            "Year":2012,
-            "Poster":"https://i.pinimg.com/564x/d7/7f/22/d77f22334dc44ad2108e59a2e562cdcb.jpg"
-        },
-        {
-            "Title":"Salaar",
-            "Year":2023,
-            "Poster":"https://i.pinimg.com/736x/de/19/bd/de19bdc0fb4f91e05e5edbeb0fd61064.jpg"
-        },
-        {
-            "Title":"HANUMAN",
-            "Year":2023,
-            "Poster":"https://im.rediff.com/movies/2024/jan/30hanuman8.jpg"
-        }
-    ]
+  "movies": [
+    {
+      "id": "1",
+      "Title": "RRR",
+      "Year": 2012,
+      "Poster": "https://i.pinimg.com/564x/d7/7f/22/d77f22334dc44ad2108e59a2e562cdcb.jpg"
+    },
+    {
+      "id": "2",
+      "Title": "Salaar",
+      "Year": 2023,
+      "Poster": "https://i.pinimg.com/736x/de/19/bd/de19bdc0fb4f91e05e5edbeb0fd61064.jpg"
+    },
+    {
+      "id": "3",
+      "Title": "HANUMAN",
+      "Year": 2023,
+      "Poster": "https://im.rediff.com/movies/2024/jan/30hanuman8.jpg"
+    }
+  ],
+  "books": []
 }
