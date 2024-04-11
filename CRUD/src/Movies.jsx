@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Form from './Form.jsx';
 
 
 export default function Movies() 
@@ -16,6 +17,11 @@ export default function Movies()
 
     },[])
 
+    const handlePost=(postData)=>{
+      axios.post("http://localhost:3000/movies",postData).
+      then((data)=>(setMovies([...movies,data.data]))) //new movies will added to setMovies and it will return
+    }
+
     const handleDelete = (id) => {
       axios
         .delete(`http://localhost:3000/movies/${id}`)
@@ -25,8 +31,25 @@ export default function Movies()
         })
     }
 
+  const[formOpen,setFormopen]=useState(false);
+
+  const openform=()=>{
+    setFormopen(true)
+  }
+
+  const closeform=()=>{
+    setFormopen(false)
+  }
+
+
   return (
-    <div className='grid grid-cols-3 place-items-center'>
+    
+    <>
+     <button className="flex items-center justify-center p-10 bg-neutral-50 text-black hover:bg-blue-700 hover:text-white h-10" onClick={openform}>
+    ADD New
+  </button>
+      
+      <div className='grid grid-cols-3 place-items-center'>
         {movies && movies.map((m,i)=>(
             <div className='Movie p-5 bg-white text-black rounded rounded-3 flex flex-col gap-3 ' key={i}>
                 <img src={m.Poster} alt={m.Title} height="300" width="200" />
@@ -36,6 +59,14 @@ export default function Movies()
                 <button onClick={()=>{handleDelete(m.id)}}>❌</button>
             </div>
         ))}
-    </div>
+      </div>
+
+      <Form  
+      isOpen={formOpen} 
+      onClose={closeform}
+      handlePost={handlePost}
+      length={movies.length}
+      />
+    </>
   )
 }
