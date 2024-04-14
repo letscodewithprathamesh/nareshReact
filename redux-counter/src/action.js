@@ -6,6 +6,15 @@ export const decrement=()=>({
     type:"DECR"
 })
 
+export const add=()=>({
+    type:"ADD",
+    amount:200,
+})
+
+export const sub=()=>({
+    type:"SUB",
+    amount:200,
+})
 
 
 

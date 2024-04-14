@@ -1,3 +1,5 @@
+import { combineReducers } from "redux";
+
 const initialState={
     count:0,
     count2:200,
@@ -15,7 +17,26 @@ const reducer1=(state=initialState,action)=>{
     }
 }
 
-export default reducer1
+
+const reducer2=(state=initialState,action)=>{
+
+    switch(action.type)
+    {
+        case 'ADD':return{...state,count2:state.count2+action.amount}
+        case 'SUB':return{...state,count2:state.count2-action.amount}
+        default: return state;
+        
+
+    }
+}
+
+const reducer=combineReducers({
+    c1:reducer1,
+    c2:reducer2
+})
+
+
+export default reducer
 
 
 {/*

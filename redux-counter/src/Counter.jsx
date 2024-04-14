@@ -1,18 +1,25 @@
 import React from 'react'
-import { increment,decrement } from './action'
+import { increment,decrement,add,sub } from './action'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function Counter() 
 {
-    const count=useSelector((state)=>state.count)
+    const count=useSelector((state)=>state.c1.count)
     const dispatch=useDispatch()
 
+    const count2=useSelector((x)=>x.c2.count2)
 
   return (
     <div>
         <h1 style={{color:'green'}}>Count:{count}</h1>
         <button onClick={()=>{dispatch(increment())}}>+</button>
         <button onClick={()=>{dispatch(decrement())}}>-</button>
+
+        <div>
+            <h1>Count2:{count2}</h1>
+            <button onClick={()=>{dispatch(add())}  }>ADD</button>
+            <button onClick={()=>{dispatch(sub())}}>SUB</button>
+        </div>
     </div>
   )
 }
