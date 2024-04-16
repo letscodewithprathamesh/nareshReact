@@ -4,6 +4,7 @@ import { clearError, setError, setLoading } from '../Redux/store';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 import {useNavigate} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Login() 
 {
@@ -45,7 +46,10 @@ export default function Login()
         <input type="password" name="" id="password" placeholder="Enter the Password"className='w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' onChange={(e)=>{setPassword(e.target.value)}} />
         <br />
 
-        <button onClick={handleLogin}>LOGIN</button>
+        <button onClick={handleLogin}>LOGIN</button> 
+        <br />
+        <h2>Not Registered <Link to="/signup"><span>Signup</span></Link> </h2> 
+       
 
         {error && <p>{error}</p>}
 

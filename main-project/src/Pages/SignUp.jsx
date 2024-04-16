@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { clearError, setError, setLoading } from '../Redux/store';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
+import {useNavigate} from 'react-router-dom'
 export default function SignUp() 
 {
     const [email,setEmail]=useState("");
@@ -10,26 +11,29 @@ export default function SignUp()
     const [name,setName]=useState("")
 
     const dispatch =useDispatch()
+    const navigate= useNavigate()
     const error=useSelector((state)=>state.product.error)
 
-    async function handleSignUp()
-    {
-        dispatch(setLoading(true))
-        dispatch(clearError())
-
-        try
-        {
-            createUserWithEmailAndPassword(auth,email,password).
-            then((val)=>{console.log("Signup successfull"+val);})
-
-            dispatch(setLoading(false))
-        }
-        catch(error)
-        {
-            dispatch(setError(error))
+    async function handleSignUp() {
+        dispatch(setLoading(true));
+        dispatch(clearError());
+    
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            console.log("Signup successful");
+            navigate('/login');
+            dispatch(setLoading(false));
+          
+        } catch (error) {
+            if (error.code === 'auth/email-already-in-use') {
+                dispatch(setError("The email address is already in use."));
+            } else {
+                dispatch(setError(error.message));
+            }
+            dispatch(setLoading(false));
         }
     }
-
+    
 
   return (
     <div>
