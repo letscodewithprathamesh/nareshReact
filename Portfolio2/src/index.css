@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+}
+
+body{
+    color: white;
+    background-color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    
+}
