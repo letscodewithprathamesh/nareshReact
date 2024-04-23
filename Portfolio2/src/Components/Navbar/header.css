@@ -1,9 +1,9 @@
+/* Common styles for both desktop and mobile */
 .navbar {
   height: 6rem;
   width: 100vw;
   max-width: 100%;
   background-color: whitesmoke;
-  
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
@@ -20,31 +20,27 @@
   width: 5rem;
 }
 
-
-
 .desktopMenuListItem {
-  
   margin: 1rem;
   cursor: pointer;
-  color: black
+  color: black;
 }
 
 .desktopMenuListItem:hover {
   color: rgb(20, 104, 104);
   padding-bottom: 0.5rem;
   border-bottom: 3px solid blue;
-  
 }
 
 .desktopMenuBtn {
- background: royalblue;
- color:white;
- border: none;
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 0 1rem;
- border-radius: 2rem;
+  background: royalblue;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  border-radius: 2rem;
 }
 
 .desktopMenuImg {
@@ -54,6 +50,44 @@
   margin: 1rem;
 }
 
-.active{
+.active {
   color: blue;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 642px) {
+  .navbar {
+    padding: 1rem; /* Adjust padding for smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 10px; /* Adjust gap between items */
+    width: 120vmax;
+  }
+
+  .logo {
+    height: 3rem; /* Reduce logo height */
+    width: auto; /* Allow logo width to adjust */
+    margin-bottom: 0.5rem; /* Add space below the logo */
+  }
+
+  .desktopMenu {
+    display: flex; /* Ensure menu items are displayed in a row */
+    flex-direction: row; /* Stack menu items vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px; /* Adjust gap between menu items */
+    margin-right: 15rem; /* Add margin to the left */
+  }
+
+  .desktopMenuListItem {
+    margin: 0; /* Reset margin */
+  }
+
+  .desktopMenuBtn {
+    height: 2rem; 
+  }
+
+  .desktopMenuImg {
+    height: 1.5rem; /* Reduce image height */
+    width: 2rem; /* Allow image width to adjust */
+  }
 }

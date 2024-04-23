@@ -1,0 +1,62 @@
+.skillcontainer {
+  padding: 50px 0;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.skilltitle {
+  text-align: center;
+
+  margin-bottom: 20px; /* Add margin bottom */
+}
+
+.skillheading {
+  color:darkturquoise;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.skill-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.frontend, .backend {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #afadad; /* Grey background */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  height: 60vh;
+}
+
+.frontend:hover, .backend:hover{
+  background-color: lightslategray; /* Lighter grey on hover */
+  color: rgb(4, 27, 84);
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2px;
+  color: rgb(12, 33, 135); /* Change color */
+  
+}
+
+
+
+.label {
+  color: rgb(0, 35, 56); /* Header color */
+    font-size: large;
+    font-weight: 600;
+  margin: 10px  ;
+  padding-right: 40%;
+}

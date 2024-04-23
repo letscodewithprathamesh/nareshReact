@@ -2,7 +2,6 @@ import React, { useEffect ,useState} from 'react'
 import bg from '../../assets/me.png';
 import btnImg from '../../assets/btnImg.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-scroll';
 import './home.css'
 import resume from '../../assets/resume.pdf'
 

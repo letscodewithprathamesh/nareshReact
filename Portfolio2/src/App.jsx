@@ -4,10 +4,10 @@ import Header from './Components/Navbar/Header'
 import Footer from './Components/Footer/Footer'
 import { Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
-import About from './Pages/About'
-import Project from './Pages/Project'
-import Contact from './Pages/Contact'
-import Skills from './Pages/Skills'
+import About from './Pages/About/About'
+import Project from './Pages/Project/Project'
+import Contact from './Pages/Contact/Contact'
+import Skills from './Pages/Skills/Skills'
 
 export default function App() {
   return (
@@ -17,8 +17,10 @@ export default function App() {
        <Header />
        <Home />
        <About />
+       <Skills />
        <Project />
        <Contact />
+
        <Footer />
 
 

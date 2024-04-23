@@ -12,8 +12,9 @@ export default function Header() {
       <div className='desktopMenu'> 
         <Link  activeClass='active' to='home' spy={true}  smooth={true} offset={-100} duration={500}  className='desktopMenuListItem'>HOME</Link>
         <Link activeClass='active' to='about' spy={true}  smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>ABOUT</Link>
+        <Link activeClass='active' to='skills' spy={true}  smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>SKILL</Link>
         <Link activeClass='active' to='project' spy={true}  smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>PROJECTS</Link>
-        <Link activeClass='active' to='contact' spy={true}  smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>CONTACT</Link>
+       
       </div>
       <button onClick={()=>{document.getElementById('contact').scrollIntoView({behavior:'smooth'})}} className='desktopMenuBtn'>
         <img src={contact} alt="" className='desktopMenuImg'/>Contact Me
